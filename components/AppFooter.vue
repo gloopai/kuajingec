@@ -13,11 +13,9 @@ const { data: categories } = await useFetch('/api/nav/categories', {
       class="mx-auto grid w-full max-w-[88rem] gap-10 px-5 py-14 sm:px-8 lg:grid-cols-4 lg:gap-12 lg:px-14"
     >
       <div class="space-y-4">
-        <div class="font-display text-lg font-semibold text-slate-900">
-          跨境电商观察
-        </div>
+        <SiteBrand variant="on-light" />
         <p class="text-sm leading-relaxed text-slate-600">
-          面向卖家与品牌方的内容型站点：平台运营、独立站增长、物流履约、支付风控与合规税务。中立、可检索、可复盘。
+          面向卖家与品牌方：平台运营、独立站增长、物流履约、支付风控与合规税务。中立、可检索、可复盘。
         </p>
       </div>
       <div>

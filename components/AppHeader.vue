@@ -33,20 +33,7 @@ watch(
       class="mx-auto flex w-full max-w-[88rem] flex-col gap-4 px-5 py-4 sm:flex-row sm:items-center sm:justify-between lg:px-14"
     >
       <div class="flex items-center gap-10">
-        <NuxtLink
-          to="/"
-          class="group flex items-center gap-2 font-display text-lg font-semibold tracking-tight text-white"
-        >
-          <span
-            class="flex h-9 w-9 items-center justify-center rounded-xl bg-sky-500/15 text-sm font-bold text-sky-300 ring-1 ring-sky-400/30"
-            aria-hidden="true"
-          >
-            KJ
-          </span>
-          <span class="group-hover:text-sky-200 transition-colors">
-            跨境电商观察
-          </span>
-        </NuxtLink>
+        <SiteBrand variant="on-dark" />
         <nav
           class="hidden items-center gap-1 text-sm font-medium text-slate-300 xl:flex"
           aria-label="主导航"

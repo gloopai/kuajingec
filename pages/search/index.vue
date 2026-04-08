@@ -9,9 +9,9 @@ const { data } = await useFetch(
 
 const results = computed(() => data.value?.results ?? [])
 
-const title = '站内搜索 · 跨境电商观察'
+const title = '站内搜索 · 出海周刊'
 const description =
-  '按标题、摘要与标签搜索跨境电商观察站内的文章与专题段落。'
+  '按标题、摘要与标签搜索出海周刊（Chuhai Weekly）站内的文章与专题段落。'
 
 const canonical = useCanonicalUrl('/search')
 

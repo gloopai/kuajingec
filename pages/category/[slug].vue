@@ -11,13 +11,14 @@ if (error.value || !data.value) {
 const entity = data.value.entity
 const items = data.value.items
 
+const config = useRuntimeConfig()
 const origin = useSiteOrigin()
 const canonical = computed(() => `${origin.value}/category/${slug}`)
 
 useSeoMeta({
   title: `${entity.title} · 频道`,
   description: entity.description,
-  ogTitle: `${entity.title} · 跨境电商观察`,
+  ogTitle: `${entity.title} · ${config.public.siteName}`,
   ogDescription: entity.description,
   ogUrl: canonical,
 })

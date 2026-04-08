@@ -1,4 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="14" fill="#0f172a"/>
-  <path d="M18 42V22h6l8 14 8-14h6v20h-5V30l-7 12h-4L23 30v12h-5z" fill="#38bdf8"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="f-bg" x1="4" y1="2" x2="30" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="f-w" x1="16" y1="20" x2="16" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="9" fill="url(#f-bg)"/>
+  <path fill="#f8fafc" d="M9 7h8.5L20 9.5V18a1.5 1.5 0 0 1-1.5 1.5H9A1.5 1.5 0 0 1 7.5 18V8.5A1.5 1.5 0 0 1 9 7Z"/>
+  <path fill="#cbd5e1" d="M17.5 7v2.5H20l-2.5-2.5Z"/>
+  <path fill="url(#f-w)" d="M0 21c4-2 8 1.5 12 .5s8-2.5 12-1.5 8 .5 8-.5V32H0V21Z"/>
+  <circle cx="23" cy="11" r="1.5" fill="#38bdf8"/>
 </svg>

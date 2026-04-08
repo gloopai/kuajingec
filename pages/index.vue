@@ -2,7 +2,7 @@
 const config = useRuntimeConfig()
 const canonical = useCanonicalUrl('/')
 
-const title = '跨境电商观察 · 平台运营、独立站、物流与合规'
+const title = '出海周刊 · 平台运营、独立站、物流与合规'
 const description =
   '系统化的跨境电商内容站：覆盖亚马逊等平台运营、Shopify 独立站、跨境物流、支付风控、欧盟税务与市场趋势。每篇文章附可执行清单与结构化检索。'
 
@@ -107,7 +107,7 @@ useJsonLd([
             class="mt-6 font-display text-4xl font-bold tracking-tight text-white sm:text-5xl"
           >
             面向卖家与品牌的
-            <span class="text-sky-300">跨境电商知识库</span>
+            <span class="text-sky-300">跨境出海知识库</span>
           </h1>
           <p class="mt-6 text-lg leading-relaxed text-slate-300">
             从平台运营到独立站、从物流履约到合规税务，用长文、清单与可检索结构，帮助你把「经验」变成「可复盘的流程」。
