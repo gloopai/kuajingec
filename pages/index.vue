@@ -4,7 +4,7 @@ const canonical = useCanonicalUrl('/')
 
 const title = '出海周刊 · 平台运营、独立站、物流与合规'
 const description =
-  '系统化的跨境电商内容站：覆盖亚马逊等平台运营、Shopify 独立站、跨境物流、支付风控、欧盟税务与市场趋势。每篇文章附可执行清单与结构化检索。'
+  '《出海周刊》深度稿件与实务指南：覆盖亚马逊等平台运营、Shopify 独立站、跨境物流、支付风控、欧盟税务与市场趋势。'
 
 useSeoMeta({
   title,
@@ -68,7 +68,7 @@ useJsonLd([
   {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: '内容频道',
+    name: '周刊栏目',
     itemListElement: (categories.value ?? []).map((c, i) => ({
       '@type': 'ListItem',
       position: i + 1,
@@ -101,7 +101,7 @@ useJsonLd([
           <p
             class="inline-flex items-center rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-sky-200 ring-1 ring-white/10"
           >
-            内容驱动 · SEO 友好 · 结构化数据
+            每周更新 · 聚焦跨境出海实务
           </p>
           <h1
             class="mt-6 font-display text-4xl font-bold tracking-tight text-white sm:text-5xl"
@@ -110,7 +110,7 @@ useJsonLd([
             <span class="text-sky-300">跨境出海知识库</span>
           </h1>
           <p class="mt-6 text-lg leading-relaxed text-slate-300">
-            从平台运营到独立站、从物流履约到合规税务，用长文、清单与可检索结构，帮助你把「经验」变成「可复盘的流程」。
+            从平台运营到独立站、从物流履约到合规税务，以长文与可执行清单，帮助你把经验沉淀为可复盘的流程。
           </p>
           <div class="mt-10 flex flex-wrap gap-3">
             <NuxtLink
@@ -192,8 +192,7 @@ useJsonLd([
               六大频道
             </h2>
             <p class="mt-3 text-sm leading-relaxed text-slate-600">
-              每个频道都有独立落地页、导语与运营段落（GSC
-              定向维护位），并链向该主题下的全部文章。
+              每个频道均有独立落地页与编者导语，并收录该主题下的全部文章。
             </p>
           </div>
           <div class="lg:col-span-2">

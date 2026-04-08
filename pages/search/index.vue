@@ -32,14 +32,11 @@ useHead(() => ({
   <div class="mx-auto w-full max-w-[88rem] px-5 py-12 sm:px-8 lg:px-14">
     <h1 class="font-display text-3xl font-bold text-slate-900">站内搜索</h1>
     <p class="mt-3 text-slate-600">
-      输入关键词匹配标题、摘要与标签。搜索 URL 可被收录为发现路径：
-      <code class="rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-800">
-        /search?q=
-      </code>
+      在标题、摘要与标签中检索你关心的文章。
     </p>
 
     <div v-if="!q" class="mt-10 rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-8 text-center text-sm text-slate-600">
-      在顶部搜索框输入关键词，或带上查询参数访问本页。
+      在顶部搜索框输入关键词开始检索。
     </div>
 
     <div v-else class="mt-10 space-y-6">

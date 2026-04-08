@@ -5,7 +5,7 @@ export interface CategoryEntity {
   title: string
   description: string
   intro: string
-  gscBlocks: { heading: string; body: string }[]
+  topicHighlights: { heading: string; body: string }[]
 }
 
 export interface ArticleSection {
@@ -27,10 +27,10 @@ export interface Article {
   outboundLinks?: { label: string; url: string }[]
 }
 
-export interface ArticleSeoExtra {
+export interface ArticleExtras {
   suitableFor: string[]
   notIdealFor: string[]
   compareHint: string
   checklistItems: string[]
-  gscParagraphs: { heading: string; body: string }[]
+  supplementQAs: { heading: string; body: string }[]
 }

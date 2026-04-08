@@ -28,7 +28,7 @@ useHead(() => ({
 }))
 
 const faqItems = [
-  ...seoExtra.gscParagraphs.map((p) => ({
+  ...seoExtra.supplementQAs.map((p) => ({
     '@type': 'Question' as const,
     name: p.heading,
     acceptedAnswer: {
@@ -245,7 +245,7 @@ useJsonLd([
           相关推荐
         </h2>
         <p class="mt-3 max-w-3xl text-base text-slate-600">
-          同主题延伸阅读，形成稳定内链与可发现路径。
+          为您延伸阅读同主题稿件。
         </p>
         <div
           class="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3"

@@ -28,7 +28,7 @@ export default defineNuxtConfig({
       siteUrl,
       siteName: '出海周刊',
       siteDescription:
-        'Chuhai Weekly（chuhaiweekly.com）：面向卖家与品牌的跨境电商内容周刊——平台运营、独立站、物流、合规与市场洞察，系统化梳理可执行策略与中立信息。',
+        '《出海周刊》Chuhai Weekly：面向卖家与品牌方的跨境电商深度内容，涵盖平台运营、独立站、物流履约、支付合规与市场洞察。',
     },
   },
 

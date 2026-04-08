@@ -103,13 +103,13 @@ useJsonLd([
       <aside class="space-y-8">
         <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
           <h3 class="text-sm font-semibold text-slate-900">
-            检索意图段落（可运营维护）
+            本频道常见问题
           </h3>
           <p class="mt-2 text-xs text-slate-500">
-            对应手册中的 gscBlocks：用于承接长尾问句与站内信息增益。
+            汇总读者常问的话题，与正文栏目相互补充。
           </p>
           <div class="mt-6 space-y-6">
-            <div v-for="(b, i) in entity.gscBlocks" :key="i">
+            <div v-for="(b, i) in entity.topicHighlights" :key="i">
               <h4 class="text-sm font-semibold text-slate-800">
                 {{ b.heading }}
               </h4>

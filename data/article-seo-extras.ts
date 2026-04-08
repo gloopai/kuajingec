@@ -1,6 +1,6 @@
-import type { ArticleSeoExtra } from '../types/content'
+import type { ArticleExtras } from '../types/content'
 
-export const articleSeoExtras: Record<string, ArticleSeoExtra> = {
+export const articleExtrasBySlug: Record<string, ArticleExtras> = {
   'amazon-listing-checklist-12': {
     suitableFor: [
       '已在亚马逊售卖标品/功能品、希望把页面质量工程化的团队',
@@ -13,12 +13,12 @@ export const articleSeoExtras: Record<string, ArticleSeoExtra> = {
     compareHint:
       '若你的核心问题是流量不足，优先检查广告与关键词承接；若流量尚可但转化差，再回到 Listing 证据链与信任模块。',
     checklistItems: [
-      '标题是否覆盖主检索词且避免违规堆砌',
+      '标题是否覆盖核心搜索词且避免违规堆砌',
       '五点是否覆盖场景、差异、边界与售后',
       '图片是否包含尺寸/兼容性/包装清单证据',
       '是否为每次改动记录了假设与数据窗口',
     ],
-    gscParagraphs: [
+    supplementQAs: [
       {
         heading: '亚马逊 Listing 优化从哪里开始最有效？',
         body: '通常从「高曝光低转化」的 SKU 入手：先定位缺失信息或差评集中点，再用图片与要点补齐证据链，比盲目改标题更有效。',
@@ -38,7 +38,7 @@ export const articleSeoExtras: Record<string, ArticleSeoExtra> = {
       '否定是否记录原因与回溯条件',
       '高点击低转化词是否回到页面承接检查',
     ],
-    gscParagraphs: [
+    supplementQAs: [
       {
         heading: '搜索词报告应该多久看一次？',
         body: '高频投放建议每周；稳定账户可双周。旺季应缩短周期，并结合库存与促销事件调整。',
@@ -54,7 +54,7 @@ export const articleSeoExtras: Record<string, ArticleSeoExtra> = {
       '广告归因窗口是否与内部报表一致',
       '弃购是否分层记录原因',
     ],
-    gscParagraphs: [
+    supplementQAs: [
       {
         heading: '独立站转化率多少算正常？',
         body: '没有行业统一值，取决于品类、客单与流量来源。更可靠的做法是先建立自己站点 28 天基线，再按渠道分层对比。',
@@ -66,7 +66,7 @@ export const articleSeoExtras: Record<string, ArticleSeoExtra> = {
     notIdealFor: ['单品爆款极度不稳定、无法建模的需求曲线'],
     compareHint: '若频繁断货，优先检查预测是否把促销需求混进日常；若长期积压，检查定价与渠道匹配。',
     checklistItems: ['提前期是否包含入库与查验', '波动是否用分位数或标准差刻画', '大促是否单独备货'],
-    gscParagraphs: [
+    supplementQAs: [
       {
         heading: '安全库存是不是越大越好？',
         body: '不是。安全库存是对不确定性的保险，过大会占用资金并增加滞销风险；需要与周转目标联动。',
@@ -78,7 +78,7 @@ export const articleSeoExtras: Record<string, ArticleSeoExtra> = {
     notIdealFor: ['需要具体申报与税号申请的一站式答案（应咨询持牌税务顾问）'],
     compareHint: '若你在多个平台与多仓发货并存，优先按「订单来源 + 发货路径」画流程图，再落到税号与发票规则。',
     checklistItems: ['确认销售主体与发货主体', '确认报价是否含税', '确认平台是否代扣'],
-    gscParagraphs: [
+    supplementQAs: [
       {
         heading: 'IOSS 和 VAT 注册冲突吗？',
         body: '取决于你的商业模式与发货路径。不同组合可能适用不同机制，需要个案分析。',
@@ -90,7 +90,7 @@ export const articleSeoExtras: Record<string, ArticleSeoExtra> = {
     notIdealFor: ['寻找「保证爆单」结论的读者'],
     compareHint: '东南亚不是单一市场：建议先国别、先渠道验证，再谈扩张。',
     checklistItems: ['目标国渠道结构', '价格带与售后预期', '本地竞品与服务标准'],
-    gscParagraphs: [
+    supplementQAs: [
       {
         heading: '东南亚做消费电子最大的坑是什么？',
         body: '往往是售后与假货/翻新认知带来的差评。需要在页面与客服策略上前置管理预期。',
@@ -99,21 +99,26 @@ export const articleSeoExtras: Record<string, ArticleSeoExtra> = {
   },
 }
 
-function defaultExtra(_slug: string): ArticleSeoExtra {
+function defaultExtra(_slug: string): ArticleExtras {
   return {
-    suitableFor: ['希望系统化阅读跨境电商实务内容的卖家与项目负责人'],
-    notIdealFor: ['寻找绕过平台与监管的操作指南'],
-    compareHint: '把文章当作检查清单：对照自己的品类、站点与履约阶段提取可执行项。',
-    checklistItems: ['记录当前漏斗基线', '明确一个要验证的假设', '设定两周复盘'],
-    gscParagraphs: [
+    suitableFor: ['关注跨境电商实务的卖家、品牌与项目负责人'],
+    notIdealFor: ['寻求规避平台规则或监管要求的操作方式'],
+    compareHint:
+      '请结合你的品类、站点与履约条件取舍；涉及税务与法律事项请咨询持牌顾问。',
+    checklistItems: [
+      '对照正文梳理当前业务基线',
+      '明确一个近期要验证的假设',
+      '设定固定复盘节奏',
+    ],
+    supplementQAs: [
       {
-        heading: '这篇文章如何配合我的实际业务使用？',
-        body: '建议先完成文内 checklist，再把结论映射到你的 SKU/站点组合；涉及税务与法律事项请咨询持牌顾问。',
+        heading: '如何把文中的建议落到自己的业务？',
+        body: '建议先按正文清单逐条自检，再映射到你的 SKU、目标市场与团队能力；重大决策以平台规则与专业意见为准。',
       },
     ],
   }
 }
 
-export function getArticleSeoExtra(slug: string): ArticleSeoExtra {
-  return articleSeoExtras[slug] ?? defaultExtra(slug)
+export function getArticleExtras(slug: string): ArticleExtras {
+  return articleExtrasBySlug[slug] ?? defaultExtra(slug)
 }

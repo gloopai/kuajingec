@@ -1,6 +1,6 @@
 import categoryEntities from '../../data/category-entities.json'
 import { articles } from '../../data/articles'
-import { getArticleSeoExtra } from '../../data/article-seo-extras'
+import { getArticleExtras } from '../../data/article-seo-extras'
 import type { Article, CategoryEntity } from '../../types/content'
 
 export function getCategoryEntities(): CategoryEntity[] {
@@ -50,6 +50,6 @@ export function getArticlePayload(slug: string) {
   if (!article) return null
   const category = getCategoryBySlug(article.categorySlug)
   const related = getRelatedArticles(article)
-  const seoExtra = getArticleSeoExtra(slug)
+  const seoExtra = getArticleExtras(slug)
   return { article, category, related, seoExtra }
 }

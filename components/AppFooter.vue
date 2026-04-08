@@ -62,7 +62,7 @@ const { data: categories } = await useFetch('/api/nav/categories', {
       <div
         class="mx-auto flex w-full max-w-[88rem] flex-col gap-2 px-5 py-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-14"
       >
-        <span>© {{ year }} {{ config.public.siteName }} · 内容用于学习与信息整理</span>
+        <span>© {{ year }} {{ config.public.siteName }} · 观点仅供参考，不构成法律或投资建议</span>
         <span class="text-slate-400">本站非任何电商平台的官方站点</span>
       </div>
     </div>
