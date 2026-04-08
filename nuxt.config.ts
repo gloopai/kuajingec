@@ -1,10 +1,11 @@
 import tailwindcss from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
+import { CHUHAI_WEEKLY_ORIGIN } from './shared/site-public'
 
 const siteUrl =
   process.env.NUXT_PUBLIC_SITE_URL ||
   process.env.SITE_URL ||
-  'http://localhost:3000'
+  CHUHAI_WEEKLY_ORIGIN
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-01-15',

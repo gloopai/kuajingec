@@ -2,6 +2,7 @@ import {
   getArticles,
   getCategoryEntities,
 } from '../utils/content'
+import { CHUHAI_WEEKLY_ORIGIN } from '../../shared/site-public'
 
 function esc(s: string) {
   return s
@@ -12,14 +13,7 @@ function esc(s: string) {
 }
 
 export default defineEventHandler((event) => {
-  const config = useRuntimeConfig(event)
-  const siteUrl = config.public.siteUrl as string
-  let origin: string
-  try {
-    origin = new URL(siteUrl).origin
-  } catch {
-    origin = 'http://localhost:3000'
-  }
+  const origin = CHUHAI_WEEKLY_ORIGIN
 
   const staticPaths = ['/', '/search']
   const categories = getCategoryEntities()
