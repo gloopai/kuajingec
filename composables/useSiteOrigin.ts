@@ -1,10 +1,12 @@
+import { CHUHAI_WEEKLY_ORIGIN } from '~/shared/site-public'
+
 export function useSiteOrigin(): ComputedRef<string> {
   const config = useRuntimeConfig()
   return computed(() => {
     try {
       return new URL(config.public.siteUrl as string).origin
     } catch {
-      return 'http://localhost:3000'
+      return CHUHAI_WEEKLY_ORIGIN
     }
   })
 }
